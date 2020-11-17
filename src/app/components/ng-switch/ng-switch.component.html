@@ -1,0 +1,37 @@
+<div [ngSwitch]="alerta">
+    <div *ngSwitchCase="'success'">success</div>
+    <div *ngSwitchCase="'info'">info</div>
+    <div *ngSwitchCase="'warning'">warning</div>
+    
+    
+    
+    <div *ngSwitchDefault>danger</div>
+</div>
+<div class="dropdown open">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+                {{alerta}}
+            </button>
+    <div class="dropdown-menu" aria-labelledby="triggerId">
+        <button type="button" (click)="alerta='success'" class="dropdown-item">Success</button>
+        <button type="button" (click)="alerta='warning'" class="dropdown-item">warning</button>
+        <button type="button" (click)="alerta='info'" class="dropdown-item">info</button>
+        <button type="button" (click)="alerta='danger'" class="dropdown-item">danger</button>
+        
+    </div>
+</div>
+ <div [ngSwitch]="alerta">
+    <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
+        A simple success alert—check it out!
+      </div>
+      
+      <div *ngSwitchCase="'warning'" class="alert alert-warning" role="alert">
+        A simple warning alert—check it out!
+      </div>
+      <div *ngSwitchCase="'info'" class="alert alert-info" role="alert">
+        A simple info alert—check it out!
+      </div>
+      <div *ngSwitchDefault  class="alert alert-danger" role="alert">
+        A simple danger alert—check it out!
+      </div>
+ </div>
